@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Test</title>
+	<style>
+		body{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			min-height: 100vh;
+		}
+		a{
+			position: relative;
+			text-transform: uppercase;
+			text-decoration: none;
+			font-family: sans-serif;
+			font-weight: 600px;
+			padding: 15px 25px;
+			color: #111;
+			border: 2px solid #000;
+			box-sizing: border-box;
+			font-size: 20px;
+			display: inline-block;
+		}
+		a:before{
+			content: '';
+			position: absolute;
+			top: 4px;
+			left: -2px;
+			width: calc(100% + 4px);
+			height: calc(100% - 8px);
+			background: #fff;
+			transform: scaleY(1);
+			transition: .5s;
+			transition-delay: .5s;
+		}
+		a:hover:before{
+			transform: scaleY(0);
+		}
+
+		a:after{
+			content: '';
+			position: absolute;
+			left: 4px;
+			top: -2px;
+			height: calc(100% + 4px);
+			width: calc(100% - 8px);
+			background: #fff;
+			transition: .5s;
+			transform: scaleX(1);
+		}
+		a:hover:after{
+			transform: scaleX(0);
+		}
+		span{
+			position: relative;
+			z-index: 3;
+		}
+	</style>
+</head>
+<body>
+	<a href="#"><span>button</span></a>
+</body>
+</html>
